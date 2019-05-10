@@ -32,7 +32,7 @@ function [acertos,taxaAcertos] = teste(W,b,X,d)
         if ( bool2s(Y(:,i)) ==  d(:,i))
             acertos = acertos+1;
         end
-    disp(acertos);
+    //disp(acertos);
     taxaAcertos= acertos/N;
     end
 endfunction
@@ -48,7 +48,7 @@ function [MatrixOrdenadaTreino,MatrixOrdenadaTeste] = MatrixOrdenadaPorIndice(ma
 endfunction
 
 X1 = csvRead('dados.data');
-max_it = 10;
+max_it = 100;
 a = 0.1;
 n= size(X1,1);
 iterFinalTestes=floor(n*0.7);
